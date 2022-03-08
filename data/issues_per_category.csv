@@ -1,10 +1,11 @@
-activestorage,1
-docs,1
-activesupport,1
-actionview,1
-actioncable,1
-actionpack,1
-activerecord,1
-With reproduction steps,2
-i18n,2
-actionmailbox,2
+categories, Number_of_associated_times
+actiontext,4
+attached PR,8
+activemodel,11
+railties,13
+actionpack,13
+activestorage,16
+actionview,17
+docs,18
+activesupport,23
+activerecord,98

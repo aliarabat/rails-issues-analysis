@@ -58,7 +58,6 @@
         issuesPerYear,
         "Download Issues per year data",
         "issues_per_year",
-        "section-1",
         "year,number_of_issues"
       );
     };
@@ -93,7 +92,6 @@
         sortable,
         "Download Comments per issue data",
         "comments_per_issue",
-        "section-2",
         "issue,labels,number_of_comments,url",
         false
       );
@@ -174,7 +172,6 @@
         sortable,
         "Download Issues per reporter data",
         "issues_per_reporter",
-        "section-3",
         "users, number_of_reported_issues"
       );
     };
@@ -189,7 +186,7 @@
           const label = issue["labels"][0]["name"];
           popularCategories = {
             ...popularCategories,
-            [label]: (!popularCategories[label] || 0) + 1,
+            [label]: (popularCategories[label] || 0) + 1,
           };
         });
 
@@ -201,21 +198,13 @@
 
       downloadCsvFile(
         sortable,
-        "Download Issues per categories data",
+        "Download Issues per category data",
         "issues_per_category",
-        "section-4",
         "categories, Number_of_associated_times"
       );
     };
 
-    const downloadCsvFile = (
-      data,
-      title,
-      fileName,
-      divId,
-      header,
-      map = true
-    ) => {
+    const downloadCsvFile = (data, title, fileName, header, map = true) => {
       let csvContent =
         "data:text/csv;charset=utf-8," +
         header +
