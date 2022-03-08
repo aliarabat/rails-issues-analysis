@@ -3,7 +3,7 @@ Add Amazon SES/SNS ingress to ActionMailbox,railties-docs-pinned-actionmailbox,6
 Rails 6 inconsistently overrides ActiveJob queue_adapter setting with TestAdapter,activejob,41,https://api.github.com/repos/rails/rails/issues/37270
 Implement returning for postgresql,activerecord,37,https://api.github.com/repos/rails/rails/issues/39968
 Where with block,activerecord,34,https://api.github.com/repos/rails/rails/issues/39445
-Common Table Expression support added "out-of-the-box",activerecord,31,https://api.github.com/repos/rails/rails/issues/37944
+Common Table Expression support added out-of-the-box,activerecord,31,https://api.github.com/repos/rails/rails/issues/37944
 Allow fstring as a safe raw SQL string,activerecord-pinned,31,https://api.github.com/repos/rails/rails/issues/33330
 Allow CSRF tokens to be stored outside of session.,actionpack-activerecord-docs-actionview-activejob-activestorage-actiontext,29,https://api.github.com/repos/rails/rails/issues/44283
 ActiveRecord::Type::Time::Value crashes when loaded from YAML on rails 7.0,activerecord,28,https://api.github.com/repos/rails/rails/issues/43966

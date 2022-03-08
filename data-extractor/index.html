@@ -7,12 +7,7 @@
     <title>Rails issue analysis</title>
   </head>
 
-  <body onload="fetchIssues()">
-    <section id="section-1"></section>
-    <section id="section-2"></section>
-    <section id="section-3"></section>
-    <section id="section-4"></section>
-  </body>
+  <body onload="fetchIssues()"></body>
   <script>
     const baseUrl =
       "https://api.github.com/repos/rails/rails/issues?page=X&per_page=100";
@@ -237,7 +232,8 @@
       link.setAttribute("href", encodedUri);
       link.setAttribute("download", `${fileName}.csv`);
 
-      document.getElementById(divId).append(link);
+      document.body.append(link);
+      document.body.append(document.createElement("br"));
     };
 
     const fetchJson = (url) =>
