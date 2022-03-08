@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rails issue analysis</title>
+  </head>
+
+  <body onload="fetchIssues()">
+    <section id="section-1"></section>
+    <section id="section-2"></section>
+    <section id="section-3"></section>
+    <section id="section-4"></section>
+  </body>
+  <script>
+    const baseUrl =
+      "https://api.github.com/repos/rails/rails/issues?page=X&per_page=100";
+
+    const MONTHS = [
+      "JAN",
+      "FEB",
+      "MAR",
+      "APR",
+      "MAI",
+      "JUN",
+      "JUL",
+      "AUG",
+      "SEP",
+      "OCT",
+      "NOV",
+      "DEC",
+    ];
+
+    async function fetchIssues() {
+      let issues = [];
+      for (let i = 1; i <= 5; i++) {
+        await fetchJson(baseUrl.replace("X", i))
+          .then((response) => issues.push(...response))
+          .catch((err) => console.log(err));
+      }
+
+      calculateIssuesPerYear(issues);
+      calculateCommentsPerIssue(issues);
+      calculateIssuesPerMonth(issues);
+      calculateIssuesPerReporter(issues);
+      calculatePopularCategories(issues);
+    }
+
+    // calculate the number issues per year
+    const calculateIssuesPerYear = (response) => {
+      let issuesPerYear = {};
+
+      response.forEach((issue) => {
+        const currentYear = new Date(issue["created_at"]).getFullYear();
+        issuesPerYear = {
+          ...issuesPerYear,
+          [currentYear]: (issuesPerYear[currentYear] || 0) + 1,
+        };
+      });
+
+      downloadCsvFile(
+        issuesPerYear,
+        "Download Issues per year data",
+        "issues_per_year",
+        "section-1",
+        "year,number_of_issues"
+      );
+    };
+
+    // calculate the number issues per year
+    const calculateCommentsPerIssue = (response) => {
+      let commentsPerIssue = [];
+
+      response.forEach((issue) => {
+        commentsPerIssue.push({
+          name: issue["title"],
+          categories: issue["labels"].map((label) => label["name"]).join("-"),
+          comments: issue["comments"],
+          url: issue["url"],
+        });
+      });
+
+      const sortable = commentsPerIssue
+        .sort((a, b) => {
+          return b["comments"] - a["comments"];
+        })
+        .slice(0, 9)
+        .map(
+          (item) =>
+            `${item["name"]},${item["categories"] ?? null},${
+              item["comments"] || 0
+            },${item["url"]}`
+        )
+        .join("\n");
+
+      downloadCsvFile(
+        sortable,
+        "Download Comments per issue data",
+        "comments_per_issue",
+        "section-2",
+        "issue,labels,number_of_comments,url",
+        false
+      );
+    };
+
+    // calculate the number of issues per month for each year
+    const calculateIssuesPerMonth = (response) => {
+      let issuesPerMonth = {};
+
+      response.forEach((issue) => {
+        const currentDate = new Date(issue["created_at"]);
+        const currentYear = currentDate.getFullYear();
+        const currentMonth = MONTHS[currentDate.getMonth()];
+
+        issuesPerMonth = {
+          ...issuesPerMonth,
+          [currentYear]: !issuesPerMonth[currentYear]
+            ? { [currentMonth]: 1 }
+            : {
+                ...issuesPerMonth[currentYear],
+                [currentMonth]:
+                  (issuesPerMonth[currentYear][currentMonth] || 0) + 1,
+              },
+        };
+      });
+
+      Object.keys(issuesPerMonth).forEach((key) => {
+        let newMonths = {};
+        for (const prop of MONTHS) {
+          if (issuesPerMonth[key][prop]) {
+            const element = issuesPerMonth[key][prop];
+            newMonths[prop] = element;
+          } else {
+            newMonths[prop] = 0;
+          }
+        }
+
+        const fileName = "issues_per_year_" + key;
+        const header = "month,number_of_issues";
+        const title = "Download #issue/month for " + key + " data";
+        let csvContent =
+          "data:text/csv;charset=utf-8," +
+          header +
+          "\n" +
+          Object.keys(newMonths)
+            .map((key) => `${key},${newMonths[key]}`)
+            .join("\n");
+        var encodedUri = encodeURI(csvContent);
+        var link = document.createElement("a");
+        link.textContent = title;
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", `${fileName}.csv`);
+        // link.click();
+        document.body.append(link);
+        document.body.append(document.createElement("br"));
+      });
+    };
+
+    // The top 10 most issues reporting users
+    const calculateIssuesPerReporter = (response) => {
+      let issuesPerRepoter = {};
+
+      response.forEach((issue) => {
+        const reporter = issue["user"]["login"];
+        issuesPerRepoter = {
+          ...issuesPerRepoter,
+          [reporter]: (issuesPerRepoter[reporter] || 0) + 1,
+        };
+      });
+
+      const sortable = Object.entries(issuesPerRepoter)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 10)
+        .reverse()
+        .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+
+      downloadCsvFile(
+        sortable,
+        "Download Issues per reporter data",
+        "issues_per_reporter",
+        "section-3",
+        "users, number_of_reported_issues"
+      );
+    };
+
+    // The top 10 most popular issue categories
+    const calculatePopularCategories = (response) => {
+      let popularCategories = {};
+
+      response
+        .filter((item) => item["labels"].length === 1)
+        .forEach((issue) => {
+          const label = issue["labels"][0]["name"];
+          popularCategories = {
+            ...popularCategories,
+            [label]: (!popularCategories[label] || 0) + 1,
+          };
+        });
+
+      const sortable = Object.entries(popularCategories)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 10)
+        .reverse()
+        .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+
+      downloadCsvFile(
+        sortable,
+        "Download Issues per categories data",
+        "issues_per_category",
+        "section-4",
+        "categories, Number_of_associated_times"
+      );
+    };
+
+    const downloadCsvFile = (
+      data,
+      title,
+      fileName,
+      divId,
+      header,
+      map = true
+    ) => {
+      let csvContent =
+        "data:text/csv;charset=utf-8," +
+        header +
+        "\n" +
+        (map
+          ? Object.keys(data)
+              .map((key) => `${key},${data[key]}`)
+              .join("\n")
+          : data);
+
+      var encodedUri = encodeURI(csvContent);
+      var link = document.createElement("a");
+      link.textContent = title;
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `${fileName}.csv`);
+
+      document.getElementById(divId).append(link);
+    };
+
+    const fetchJson = (url) =>
+      fetch(url)
+        .then((res) => res.json())
+        .catch((err) => err);
+  </script>
+</html>
