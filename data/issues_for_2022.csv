@@ -1,0 +1,158 @@
+name,comments,labels,pull_request,state,reactions,user,author_association
+Instrument Action Mailbox processing,0,actionmailbox,no,open,0,lewispb,CONTRIBUTOR
+`Dalli::Client` doesn't pick up the value of `MEMCACHE_SERVERS` when used with Rails,0, ,no,open,0,radiantshaw,NONE
+Adds `#interceptors` method to ActionMailer::Base,1,actionmailer-railties,no,open,0,ghousemohamed,CONTRIBUTOR
+Fix `remove_foreign_key` with `:if_exists` option when foreign key actually exists,0,activerecord,no,open,0,fatkodima,CONTRIBUTOR
+Raise an error if uses `remove_foreign_key` with `if_exists` options,0, ,no,open,0,kmiyake,CONTRIBUTOR
+Refer to number_field_tag in range_field documentation,0,docs-actionview,no,open,0,dmarcoux,CONTRIBUTOR
+Restart Action Cable when Redis disconnects,1,actioncable,no,open,0,engwan,NONE
+Avoid double type cast when serializing attributes,0,activemodel-activerecord,no,open,0,jonathanhefner,MEMBER
+System tests screenshots - include path in test result message, backtrace or separate metadata,2, ,no,open,0,davidwessman,NONE
+Add `active_record.destroy_association_async_batch_size` configuration,0,activerecord-railties-docs,no,open,0,nholden,CONTRIBUTOR
+Always preload if using proc with multifetch cache,0,actionview,no,open,0,ghiculescu,MEMBER
+Add :renderable to the list of rendering keys supported by ActionView::Renderer#render,0,actionview,no,open,0,voraciousdev,NONE
+Mime Support for  problem detail ,1,actionpack,no,open,0,MGatner,NONE
+Add Module#eager_load! to trigger the loading of autoloaded constants,0,activesupport,no,open,0,casperisfine,CONTRIBUTOR
+Make `timestamptz` a time zone aware type for Postgres,1,activerecord,no,open,0,ghiculescu,MEMBER
+Document behaviour when `:touch` is used with `:counter_cache`,0,activerecord,no,open,0,mansakondo,NONE
+Improve autoloading_and_reloading_constants.md,1,docs,no,open,0,araishikeiwai,NONE
+Use #attribute_names in ActiveRecord::Core#inspect,1,activerecord,no,open,0,fractaledmind,NONE
+fix hash from_xml missing tag error,0,activesupport,no,open,0,hxx,NONE
+STI foreign key auto detection regression,2, ,no,open,0,yskkin,CONTRIBUTOR
+[docs] RemoteIp improvements,0,actionpack-docs,no,open,0,ghiculescu,MEMBER
+Simplify adapter construction; defer connect until first use,0,activerecord,no,open,0,matthewd,MEMBER
+Configure ActiveStorage with AzureStorage given SAS token,0, ,no,open,0,BrandonBalala,NONE
+Allow the Flash Middleware to be deleted from the stack:,5,actionpack-railties,no,open,0,Edouard-chin,MEMBER
+Rails 7 looking for application.css,11, ,no,open,0,josephmo,NONE
+Defer verification of database connections,1,activerecord,no,open,0,matthewd,MEMBER
+Fix the example for using a CDN with ActiveStorage,0,docs,no,open,0,NobodysNightmare,CONTRIBUTOR
+`precision: nil` added to datetime columns in `schema.rb` in 7.0.2 causes a change in value,14, ,no,open,0,thisismydesign,NONE
+Make ActionView::Helpers::Tags::CheckBox convert object's array values to strings so it works the same way as ActionView::Helpers::Tags::CollectionSelect.,2,actionview,no,open,0,nashby,CONTRIBUTOR
+Re-raise unexpected errors in MemCacheStore tests,0,activesupport,no,open,0,matthewd,MEMBER
+Adds test coverage for the `#attach` method behaviour in activestorage,0,activestorage,no,open,0,ghousemohamed,CONTRIBUTOR
+Remove Rack::Sendfile from the default middleware stack,0,actionpack-railties-docs-activestorage-actionmailbox-actiontext,no,open,0,SValkanov,CONTRIBUTOR
+ActiveSupport::Deprecation does not fallback to configured disallowed_behavior,10,activesupport,no,open,0,grncdr,CONTRIBUTOR
+A doubt about the build scope of association,1, ,no,open,0,OuYangJinTing,CONTRIBUTOR
+before_type_cast not work when it called by an object through association mapping and index,4,activerecord,no,open,0,jiso0jung,NONE
+fix remaining asserts that should be assert_equal,3,actionpack-activemodel-activerecord-activesupport-railties,no,open,0,SkipKayhil,CONTRIBUTOR
+Added assertions for testing unicode characters in `to_fs` method on `Numeric` for `:currency`,4,activesupport,no,open,0,ghousemohamed,CONTRIBUTOR
+Port `BeforeTypeCast` to Active Model,2,activemodel-activerecord,no,open,0,jonathanhefner,MEMBER
+PR #36210 solved only for `save!`, but not for `save` neither `valid?`.,1,activerecord,no,open,0,cgimenes,NONE
+Make ActiveRecord::Rollback bubble to outer transactions,7,activerecord,no,open,0,nikolai-b,CONTRIBUTOR
+Apply `:nodoc:` to nested classes and modules [ci-skip],4,docs,no,open,0,jonathanhefner,MEMBER
+ActionMailer smtp_settings lost with ruby 3.0 (but applied with ruby 2.7),7,actionmailer-third party issue,no,open,0,hoeni,NONE
+Rails Guides - Fix incorrect generator example [ci-skip],2,docs,no,open,0,gfauredumont,NONE
+connection.sanitize_limit is no longer needed when building limit clause,5,activerecord,no,open,0,harrycis,NONE
+When using both touch and counter_cache on a belongs_to association, updated_at on the associated object instance is not updated,13,activerecord-With reproduction steps,no,open,0,yan-hoose,NONE
+PG: Schema cache with TypeMap,2,activerecord,no,open,0,mochnatiy,NONE
+Request.headers in a JSON response raises SystemStackError,1,actionpack-With reproduction steps,no,open,0,realmocaccino,NONE
+Fix `ActiveModel::EachValidator` options hash handling,0,activemodel,no,open,0,dspaeth-lp,NONE
+ActiveStorage :host in subfolder,0,activestorage,no,open,0,exocode,NONE
+Add additional content injection prevention to form HTML,8,docs-actionview,no,open,0,camertron,NONE
+Make Notifications::Fanout faster and safer,0,activesupport,no,open,0,jhawthorn,MEMBER
+`form_with`: Attempt to call to_model on `model:`,1,actionview,no,open,0,seanpdoyle,CONTRIBUTOR
+Use clusivity for numericality with :in or :within,0,activemodel,no,open,0,SkipKayhil,CONTRIBUTOR
+Document some Application::Configuration as accessors [ci-skip],0,railties,no,open,0,p8,MEMBER
+[activerecord] `numericality: {in: ...}` should accept an Array or Set of explicit values,3,activerecord,no,open,0,postmodern,CONTRIBUTOR
+validates_with can't be used with multiple Validators when the options hash must contain :attributes,2,activemodel-attached PR,no,open,0,dspaeth-lp,NONE
+`# :nodoc:` on ActiveModel::Errors#copy!,0,activemodel,no,open,0,jameno,NONE
+PoC: Active Record API for general async queries,0,activerecord,no,open,0,casperisfine,CONTRIBUTOR
+Cast `ActiveSupport::Duration` to postgres interval (#44341),8,activerecord-docs-PostgreSQL,no,open,0,aramgre,NONE
+Update tests and docs for ActiveRecord::Sanitization,0,activerecord,no,open,0,kmcphillips,CONTRIBUTOR
+ActionCable ignores WebSocket protocol making the connection close with status 1066,0,actioncable,no,open,0,fabiolnm,CONTRIBUTOR
+Enumerable#many? in line with Enumerable#any?,3,activesupport,no,open,0,eval,CONTRIBUTOR
+Update action_text/index.js,0,actiontext,no,open,0,Tarbetu,NONE
+Arel::UpdateManager with join statement on a sqlite and postgres database are invalid,1,activerecord-With reproduction steps,no,open,0,gagalago,NONE
+ActiveRecord::RecordNotFound error in fixture array when deleting or destroying objects through model callbacks during test execution,3,activerecord,no,open,0,jlucartc,NONE
+Remove LIMIT and OFFSET on relations when batch iterating,0,activerecord,no,open,0,drcapulet,CONTRIBUTOR
+Tests related do #40226 fail.,2,third party issue-activestorage,no,open,0,pvalena,CONTRIBUTOR
+f.submit: Set the the value of the explicit `:value` option to the value of `data-disable-with` ,0,actionview,no,open,0,noriyotcp,NONE
+fix activestorage update,1,activestorage,no,open,0,piecehealth,CONTRIBUTOR
+Load activestorage services after the config has been initialised,0,activestorage,no,open,0,ghousemohamed,CONTRIBUTOR
+Add `Model` type to Active Model attributes,1,activemodel,no,open,0,nvasilevski,CONTRIBUTOR
+Add assertion to ensure `ActiveRecord::Migration::MIGRATOR_SALT` isn't changed,2,activerecord,no,open,0,paarthmadan,CONTRIBUTOR
+Support all `:dependent` options for `has_one_attached` and `has_many_attached`,0,activestorage,no,open,0,fatkodima,CONTRIBUTOR
+Raise exception if Active Storage is configured and `config.active_storage.service` is not explicitly set,1,activestorage,no,open,0,ghousemohamed,CONTRIBUTOR
+Provide change summary before details for all gems,0, ,no,open,0,mohits,NONE
+Handle dependent: nil on ActiveStorage attachments,5,activestorage,no,open,0,ryanseys,NONE
+Comparison queries against nullable UUID column in postgres should use `IS [NOT] DISTINCT FROM` instead of `[!]=`,2,activerecord,no,open,0,JoeWoodward,NONE
+Mention Shakapacker for the updated Webpacker.,3,docs,no,open,0,justin808,CONTRIBUTOR
+Add an index to the guides,0,docs,no,open,0,martindemello,NONE
+Improve handling of overlapping events,1,activesupport,no,open,0,jaynetics,CONTRIBUTOR
+`ActiveSupport::Notification`: bugs with overlapping events and subscriptions,2,activesupport,no,open,0,jaynetics,CONTRIBUTOR
+Postgres adapter does not cast ActiveSupport::Duration to interval in array condition,2,activerecord-attached PR-PostgreSQL,no,open,0,aramgre,NONE
+Unify select tag helpers nil value handling,0,actionview,no,open,0,jonathanhefner,MEMBER
+Prefer value before type cast in form tag helpers,0,actionview,no,open,0,jonathanhefner,MEMBER
+Better Documentation for rails new,4,docs,no,open,0,ChaelCodes,CONTRIBUTOR
+Add Active Model `Collection` attribute type,3,activemodel,no,open,0,nvasilevski,CONTRIBUTOR
+Lazy iterator, interlock deadlock,0,activerecord,no,open,0,mthorn,NONE
+Model#save! should not update instance attributes that are already set,0,activemodel-activerecord,no,open,0,akostadinov,CONTRIBUTOR
+Reversed attribute precedence in insert_all,0,activerecord,no,open,0,kobsy,CONTRIBUTOR
+Non-nullable field with default value raises ActiveRecord::Encryption::Errors::Decryption when absent,3, ,no,open,0,airled,NONE
+css:install:bootstrap doesn't complete successfully,4, ,no,open,0,MattBudz,NONE
+ActiveRecord::Sanitization::ClassMethods#sanitize_sql surrounds Numerics with quotes,9,activerecord,no,open,0,rbgrouleff,NONE
+Add docs about how to use remote browser in test,1,docs,no,open,0,viktorianer,NONE
+Always heed `ActiveModel::Name#human` `:count` option,0,activemodel,no,open,0,jonathanhefner,MEMBER
+Improve requiring of scalar parameters,0,actionpack-actionmailbox,no,open,0,p8,MEMBER
+Update RDoc comments for #redirect,0,actionpack,no,open,0,guillaumecabanel,NONE
+Not depending on unmaintained dependencies,3,asset pipeline,no,open,0,Segaja,NONE
+Support declarative-style test name filters,0,railties,no,open,0,jonathanhefner,MEMBER
+Action mailbox migration does not respect the active record's primary_key_type,1,actionmailbox,no,open,0,ExMember,CONTRIBUTOR
+Fix handling disabled schema dumping for test environment,0,activerecord,no,open,0,fatkodima,CONTRIBUTOR
+Allow CSRF tokens to be stored outside of session.,29,actionpack-activerecord-docs-actionview-activejob-activestorage-actiontext,no,open,0,simbasdad,NONE
+Skip schema load when schema_dump is false,8,activerecord,no,open,0,aliismayilov,CONTRIBUTOR
+Support reading `FormBuilder#id` from `id:` option,0,actionview,no,open,0,seanpdoyle,CONTRIBUTOR
+form_with: ensure closing tag when omitting block,3,actionview,no,open,0,seanpdoyle,CONTRIBUTOR
+[ci skip] Add Action Text guide to the navigation,0,docs,no,open,0,sedubois,CONTRIBUTOR
+[ci skip] Add Mobility Action Text to the guides,0,docs,no,open,0,sedubois,CONTRIBUTOR
+references/belongs_to method create a column as integer when migration version is 6.0 even if we use PostgreSQL/MySQL,4,activerecord-attached PR-PostgreSQL-With reproduction steps,no,open,0,willnet,CONTRIBUTOR
+Missing zeitwerk synchronization in rails 7.0.2.2 and ruby 3.1.0,5, ,no,open,0,mildred,NONE
+deadlock in activesupport 7.0.1 (ruby 3.1.0),6,activesupport,no,open,0,mildred,NONE
+Fix invalid durations with ActiveJob deserialization,0,activejob,no,open,0,jdelStrother,CONTRIBUTOR
+ActionController::RoutingError (No route matches [GET]  /assets/application.js....) ,1, ,no,open,0,simonsapiel,NONE
+StiPreload implementation from Rails Guides results in uninitialized constant errors on Rails 7,17, ,no,open,0,dwillett,NONE
+ActiveStorage controllers leak ActiveRecord database connections,7,activerecord-activestorage,no,open,0,bubba,CONTRIBUTOR
+conflicts between css and js file,1,asset pipeline,no,open,0,martindemello,NONE
+Warn on instantiating records w/ ambiguous columns,0,activerecord,no,open,0,khasinski,CONTRIBUTOR
+Speed up missing query ,0,activerecord,no,open,0,nikolai-b,CONTRIBUTOR
+DateTime calculation functions use other timezone offset than the original time,5,activesupport,no,open,0,emilkappert,NONE
+ActionController defaulting response to turbo_stream,7, ,no,open,0,dvodvo,NONE
+Add column does not respect :if_not_exists,4,activerecord,no,open,0,HarlemSquirrel,NONE
+Update and rename getting_started.md to 0-0-0-0-0_getting_started.md,0,docs,no,open,0,Matteo85,NONE
+Add Rails configurations to  about  command and page.,2,railties,no,open,0,p8,MEMBER
+Fix exception on EtagWithFlash when api_only,0,actionpack,no,open,0,mihaic195,CONTRIBUTOR
+Move abstract_mysql_adapter_test to mysql2 directory,2,activerecord,no,open,0,sikachu,MEMBER
+Add yarn install into bin/setup when not using importmap,0,railties,no,open,0,duduribeiro,CONTRIBUTOR
+Add `ActiveRecord::Base::generates_token_for`,0,activerecord,no,open,0,jonathanhefner,MEMBER
+Fix ActiveSupport::Instrumenter: nil can't be coerced into Float,1,activesupport,no,open,0,mihaic195,CONTRIBUTOR
+Rails reload! (both in console and using the reloader.reload!) hangs with multi-threaded applications,0, ,no,open,0,mensfeld,NONE
+Basic Rails 7 project with Bootstrap fails,11, ,no,open,0,LukevanTricht,NONE
+ActiveStorage proxy with rails api only requiring Flash middleware,6, ,no,open,0,uxxman,CONTRIBUTOR
+Add `MessageVerifiers` and `MessageEncryptors` classes,0,activesupport-railties,no,open,0,jonathanhefner,MEMBER
+Add net-http dependency to frameworks using mail,7,actionmailer-actionmailbox,no,open,0,composerinteralia,MEMBER
+Rails 7: link_to delete not working (wrong redirect),9,actionview,no,open,0,collimarco,NONE
+[Rails 7] load_async for find_by_sql & Base.connection.execute,4, ,no,open,0,OskarEichler,NONE
+[ActiveStorage::Variant] Calling `variant.key` on a preloaded object should not trigger a database `Load`,1,activestorage,no,open,0,nduitz,NONE
+rails 7.0.1 does not deliver updated assets in a dev environment if they've been previously precompiled.,7, ,no,open,0,thebravoman,NONE
+Only configure smtp_settings if provided on configuration,0,actionmailer-railties,no,open,0,andrehjr,CONTRIBUTOR
+SMTP Connection Error,10,actionmailer,no,open,0,hoffdog,NONE
+field_error_proc does not trigger on belongs_to association without explicit validation on <association>_id,2,activerecord-With reproduction steps,no,open,0,guaguasi,NONE
+Configured email interceptors not accessible from the config hash,6,actionmailer-With reproduction steps,no,open,0,matteo-rossi-wise,NONE
+Update ActionText install generator output messages colors,0,railties-actiontext,no,open,0,abhaynikam,CONTRIBUTOR
+Explicitly list negative currency format,1,activesupport,no,open,0,frenkel,CONTRIBUTOR
+Rails 7: issues reloading a class that uses delegate_missing_to and references other class,1, ,no,open,0,machty,CONTRIBUTOR
+Avoid booting in development then test for test tasks,1,actionmailer-actionpack-railties-actioncable-actionmailbox,no,open,0,etiennebarrie,CONTRIBUTOR
+Fix Time::Value serialization,0,activerecord-activesupport,no,open,0,chrisortman,NONE
+Update default puma to reflect separate RACK_ENV and support debugging,2,railties,no,open,0,justin808,CONTRIBUTOR
+Pysch 4 support with secrets is not available in the latest 6.1.4 release,6, ,no,open,0,CamilleDrapier,NONE
+Extend audio_tag and video_tag to accept Active Storage attachments,1,actionmailer-activerecord-activesupport-actionview-activestorage,no,open,0,MatheusRich,CONTRIBUTOR
+Associated new records are validated even if :autosave and :validate are false,2,activerecord-With reproduction steps,no,open,0,niklas-hasselmeyer,NONE
+Fix #43978 migrations on multidb,5,activerecord,no,open,0,codeodor,CONTRIBUTOR
+Migration names should use autoloader inflections,16, ,no,open,0,jaredbeck,CONTRIBUTOR
+Use same default host name in ActionController::Renderer as Integration::Session,5,actionpack,no,open,0,dmolesUC,NONE
+ActiveSupport::XmlMini cannot use the JDOM backend for JRuby 9.3.x.x,1, ,no,open,0,andreimaxim,NONE
+Request tests and ApplicationController use different default hostnames,3,actionpack-attached PR,no,open,0,dmolesUC,NONE
+Problem trying to upgrade Rails application to 6.1.4.1 and autoloading with zeitwerk,13, ,no,open,0,mroguzman,NONE
+ActiveRecord ignores attribute serializer if serialized value responds to `id`,5,activerecord,no,open,0,mihaic195,CONTRIBUTOR
+changed example cookie rotator to be in after_initialize block,0,docs,no,open,0,ryanhertz,NONE
+Warning on converting the old remote:true delete  links to Rails 7,0, ,no,open,0,salex,NONE
