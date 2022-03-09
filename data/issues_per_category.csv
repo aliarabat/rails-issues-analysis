@@ -1,11 +1,10 @@
-categories, Number_of_associated_times
-actiontext,4
-attached PR,8
-activemodel,11
-railties,13
-actionpack,13
-activestorage,16
-actionview,17
-docs,18
-activesupport,23
-activerecord,98
+actionview,32
+pinned,38
+railties,42
+activestorage,43
+docs,45
+activesupport,45
+With reproduction steps,46
+actionpack,48
+attached PR,73
+activerecord,208
