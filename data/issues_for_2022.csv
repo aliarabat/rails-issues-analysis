@@ -7,11 +7,11 @@ Raise an error if uses `remove_foreign_key` with `if_exists` options,0,null,no,o
 Refer to number_field_tag in range_field documentation,0,docs-actionview,no,open,0,dmarcoux,CONTRIBUTOR
 Restart Action Cable when Redis disconnects,1,actioncable,no,open,0,engwan,NONE
 Avoid double type cast when serializing attributes,0,activemodel-activerecord,no,open,0,jonathanhefner,MEMBER
-System tests screenshots - include path in test result message, backtrace or separate metadata,2,null,no,open,0,davidwessman,NONE
+System tests screenshots - include path in test result message; backtrace or separate metadata,2,null,no,open,0,davidwessman,NONE
 Add `active_record.destroy_association_async_batch_size` configuration,0,activerecord-railties-docs,no,open,0,nholden,CONTRIBUTOR
 Always preload if using proc with multifetch cache,0,actionview,no,open,0,ghiculescu,MEMBER
 Add :renderable to the list of rendering keys supported by ActionView::Renderer#render,0,actionview,no,open,0,voraciousdev,NONE
-Mime Support for  problem detail ,1,actionpack,no,open,0,MGatner,NONE
+Mime Support for "problem detail",1,actionpack,no,open,0,MGatner,NONE
 Add Module#eager_load! to trigger the loading of autoloaded constants,0,activesupport,no,open,0,casperisfine,CONTRIBUTOR
 Make `timestamptz` a time zone aware type for Postgres,1,activerecord,no,open,0,ghiculescu,MEMBER
 Document behaviour when `:touch` is used with `:counter_cache`,0,activerecord,no,open,0,mansakondo,NONE
@@ -37,13 +37,13 @@ before_type_cast not work when it called by an object through association mappin
 fix remaining asserts that should be assert_equal,3,actionpack-activemodel-activerecord-activesupport-railties,no,open,0,SkipKayhil,CONTRIBUTOR
 Added assertions for testing unicode characters in `to_fs` method on `Numeric` for `:currency`,4,activesupport,no,open,0,ghousemohamed,CONTRIBUTOR
 Port `BeforeTypeCast` to Active Model,2,activemodel-activerecord,no,open,0,jonathanhefner,MEMBER
-PR #36210 solved only for `save!`, but not for `save` neither `valid?`.,1,activerecord,no,open,0,cgimenes,NONE
+PR #36210 solved only for `save!`; but not for `save` neither `valid?`.,1,activerecord,no,open,0,cgimenes,NONE
 Make ActiveRecord::Rollback bubble to outer transactions,7,activerecord,no,open,0,nikolai-b,CONTRIBUTOR
 Apply `:nodoc:` to nested classes and modules [ci-skip],4,docs,no,open,0,jonathanhefner,MEMBER
 ActionMailer smtp_settings lost with ruby 3.0 (but applied with ruby 2.7),7,actionmailer-third party issue,no,open,0,hoeni,NONE
 Rails Guides - Fix incorrect generator example [ci-skip],2,docs,no,open,0,gfauredumont,NONE
 connection.sanitize_limit is no longer needed when building limit clause,5,activerecord,no,open,0,harrycis,NONE
-When using both touch and counter_cache on a belongs_to association, updated_at on the associated object instance is not updated,13,activerecord-With reproduction steps,no,open,0,yan-hoose,NONE
+When using both touch and counter_cache on a belongs_to association; updated_at on the associated object instance is not updated,13,activerecord-With reproduction steps,no,open,0,yan-hoose,NONE
 PG: Schema cache with TypeMap,2,activerecord,no,open,0,mochnatiy,NONE
 Request.headers in a JSON response raises SystemStackError,1,actionpack-With reproduction steps,no,open,0,realmocaccino,NONE
 Fix `ActiveModel::EachValidator` options hash handling,0,activemodel,no,open,0,dspaeth-lp,NONE
@@ -85,7 +85,7 @@ Unify select tag helpers nil value handling,0,actionview,no,open,0,jonathanhefne
 Prefer value before type cast in form tag helpers,0,actionview,no,open,0,jonathanhefner,MEMBER
 Better Documentation for rails new,4,docs,no,open,0,ChaelCodes,CONTRIBUTOR
 Add Active Model `Collection` attribute type,3,activemodel,no,open,0,nvasilevski,CONTRIBUTOR
-Lazy iterator, interlock deadlock,0,activerecord,no,open,0,mthorn,NONE
+Lazy iterator; interlock deadlock,0,activerecord,no,open,0,mthorn,NONE
 Model#save! should not update instance attributes that are already set,0,activemodel-activerecord,no,open,0,akostadinov,CONTRIBUTOR
 Reversed attribute precedence in insert_all,0,activerecord,no,open,0,kobsy,CONTRIBUTOR
 Non-nullable field with default value raises ActiveRecord::Encryption::Errors::Decryption when absent,3,null,no,open,0,airled,NONE
@@ -109,7 +109,7 @@ references/belongs_to method create a column as integer when migration version i
 Missing zeitwerk synchronization in rails 7.0.2.2 and ruby 3.1.0,5,null,no,open,0,mildred,NONE
 deadlock in activesupport 7.0.1 (ruby 3.1.0),6,activesupport,no,open,0,mildred,NONE
 Fix invalid durations with ActiveJob deserialization,0,activejob,no,open,0,jdelStrother,CONTRIBUTOR
-ActionController::RoutingError (No route matches [GET]  /assets/application.js....) ,1,null,no,open,0,simonsapiel,NONE
+ActionController::RoutingError (No route matches [GET] "/assets/application.js....) ,1,null,no,open,0,simonsapiel,NONE
 StiPreload implementation from Rails Guides results in uninitialized constant errors on Rails 7,17,null,no,open,0,dwillett,NONE
 ActiveStorage controllers leak ActiveRecord database connections,7,activerecord-activestorage,no,open,0,bubba,CONTRIBUTOR
 conflicts between css and js file,1,asset pipeline,no,open,0,martindemello,NONE
@@ -119,7 +119,7 @@ DateTime calculation functions use other timezone offset than the original time,
 ActionController defaulting response to turbo_stream,7,null,no,open,0,dvodvo,NONE
 Add column does not respect :if_not_exists,4,activerecord,no,open,0,HarlemSquirrel,NONE
 Update and rename getting_started.md to 0-0-0-0-0_getting_started.md,0,docs,no,open,0,Matteo85,NONE
-Add Rails configurations to  about  command and page.,2,railties,no,open,0,p8,MEMBER
+Add Rails configurations to "about" command and page.,2,railties,no,open,0,p8,MEMBER
 Fix exception on EtagWithFlash when api_only,0,actionpack,no,open,0,mihaic195,CONTRIBUTOR
 Move abstract_mysql_adapter_test to mysql2 directory,2,activerecord,no,open,0,sikachu,MEMBER
 Add yarn install into bin/setup when not using importmap,0,railties,no,open,0,duduribeiro,CONTRIBUTOR
